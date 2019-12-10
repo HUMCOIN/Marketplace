@@ -1,0 +1,47 @@
+{
+  "name": "@humcoin/marketplace",
+  "version": "0.0.1-beta",
+  "description": "",
+  "files": [
+    "contracts/",
+    "migrations/",
+    "test/",
+    "truffle-config.js"
+  ],
+  "scripts": {
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "test": "truffle test",
+    "solhint": "./node_modules/.bin/solhint -f table contracts/**/*.sol",
+    "prettier:solidity": "./node_modules/.bin/prettier --write contracts/**/*.sol"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humcoin/marketplace"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/humcoin/marketplace/issues"
+  },
+  "homepage": "https://github.com/humcoin/marketplace/#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^2.4.0",
+    "@truffle/hdwallet-provider": "^1.0.22",
+    "dotenv": "^8.0.0"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "eth-gas-reporter": "^0.2.12",
+    "ethlint": "1.2.4",
+    "husky": "^3.1.0",
+    "prettier": "^1.19.1",
+    "prettier-plugin-solidity": "^1.0.0-alpha.34",
+    "solhint": "^2.3.0",
+    "solhint-plugin-prettier": "0.0.3"
+  },
+  "husky": {
+    "hooks": {
+       "pre-push": "npm run prettier:solidity"
+    }
+  }
+}
