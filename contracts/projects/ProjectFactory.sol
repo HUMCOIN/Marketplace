@@ -1,6 +1,6 @@
 pragma solidity ^0.5.9;
 
-import "./Project.sol";
+import './Project.sol';
 
 contract ProjectFactory {
     Project[] allProjects;

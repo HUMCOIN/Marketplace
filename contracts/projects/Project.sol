@@ -6,13 +6,13 @@ contract Project {
     uint32 public finishTime;
 
     constructor(address _company, uint8 _value, uint32 _finishTime) public {
-      company = _company;
-      value = _value;
-      finishTime = _finishTime;
+        company = _company;
+        value = _value;
+        finishTime = _finishTime;
     }
 
     address[] _investors;
-    mapping(address => uint) _investorsParticipation;
+    mapping(address => uint256) _investorsParticipation;
 
     function() external payable {}
 
