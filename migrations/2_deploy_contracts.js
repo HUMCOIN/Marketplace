@@ -1,5 +1,5 @@
-const Project = artifacts.require("Project");
+const ProjectFactory = artifacts.require("./projects/ProjectFactory.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Project);
+  deployer.deploy(ProjectFactory);
 };

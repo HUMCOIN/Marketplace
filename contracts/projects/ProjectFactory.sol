@@ -1,0 +1,13 @@
+pragma solidity ^0.5.9;
+
+import "./Project.sol";
+
+contract ProjectFactory {
+    Project[] allProjects;
+    function createProject(address _company, uint8 _value, uint32 _finishTime) external {
+        Project project = new Project(_company, _value, _finishTime);
+        allProjects.push(project);
+        address(project);
+    }
+
+}
