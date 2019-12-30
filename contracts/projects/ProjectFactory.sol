@@ -10,4 +10,7 @@ contract ProjectFactory {
         address(project);
     }
 
+    function getProjects() public view returns (Project[] memory) {
+        return allProjects;
+    }
 }

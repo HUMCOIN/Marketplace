@@ -19,6 +19,7 @@
  */
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
+require('dotenv').config()
 // const infuraKey = "fj4jll3k.....";
 //
 // const fs = require('fs');
@@ -28,7 +29,7 @@ module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
    * defaults web3 uses to send transactions. If you don't specify one truffle
-   * ***REMOVED***spin up a development blockchain for you on port 9545 when you
+   * will spin up a development blockchain for you on port 9545 when you
    * run `develop` or `test`. You can ask a truffle command to use a specific
    * network from the command line, e.g
    *
@@ -49,20 +50,20 @@ module.exports = {
     },
     rinkeby: {
       provider: () =>
-        new HDWalletProvider(process.env.MNENOMIC, "https://rinkeby.infura.io/v3/" + process.env.INFURA_API_KEY),
+        new HDWalletProvider(process.env.MNEMONIC, "https://rinkeby.infura.io/v3/" + process.env.INFURA_API_KEY),
       network_id: 4,
       gas: 4465030,
       gasPrice: 10000000000
     },
-    ropsten: {
+    kovan: {
       provider: () =>
-        new HDWalletProvider(process.env.MNENOMIC, "https://ropsten.infura.io/v3/" + process.env.INFURA_API_KEY),
-      network_id: 3,
+        new HDWalletProvider(process.env.MNEMONIC, "https://kovan.infura.io/v3/" + process.env.INFURA_API_KEY),
+      network_id: 42,
       gas: 4465030,
       gasPrice: 10000000000
     },
     main: {
-      provider: () => new HDWalletProvider(process.env.MNENOMIC, "https://mainnet.infura.io/v3/" + process.env.INFURA_API_KEY),
+      provider: () => new HDWalletProvider(process.env.MNEMONIC, "https://mainnet.infura.io/v3/" + process.env.INFURA_API_KEY),
       network_id: 1,
       gas: 4465030,
       gasPrice: 10000000000
