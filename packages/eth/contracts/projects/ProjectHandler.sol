@@ -4,10 +4,10 @@ import './Project.sol';
 
 contract ProjectHandler is Project {
     function getInvestors() public view returns (address[] memory) {
-        return _investors;
+        return investors;
     }
 
     function checkInvestorParticipation(address _investor) public view returns (uint256) {
-        return _investorsParticipation[_investor];
+        return investorsParticipation[_investor];
     }
 }

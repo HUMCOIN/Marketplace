@@ -1,0 +1,1 @@
+export { getDefaultAccount } from './methods';
