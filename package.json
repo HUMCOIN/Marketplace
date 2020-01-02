@@ -3,9 +3,11 @@
   "version": "0.0.1-beta",
   "scripts": {
     "postinstall": "npx lerna bootstrap",
-    "start": "cd packages/ui && npm run start"
+    "start": "cd packages/ui && npm run start",
+    "migrate": "cd packages/eth && concurrently \"ganache-cli\" \"npm run migrate\""
   },
   "devDependencies": {
-    "lerna": "^3.18.4"
+    "lerna": "^3.18.4",
+    "concurrently": "^5.0.0"
   }
 }
