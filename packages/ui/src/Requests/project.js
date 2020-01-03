@@ -1,4 +1,4 @@
-import { callContract, instanceContract, tryContract, projectFactoryAddress, sendContract } from '../Libs/web3'
+import { callContract, instanceContract, tryContract, projectFactoryAddress, sendContract } from '../libs/web3'
 
 export const getAllProjects = async () => {
   const contract = await instanceContract('ProjectFactory')

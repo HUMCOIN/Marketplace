@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { add } from "../../Libs/ipfs";
+import { add } from "../../libs/ipfs";
 import { getAllProjects, createProject } from "../../Requests/project";
 
 import "./main.css";
