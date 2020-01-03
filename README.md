@@ -1,4 +1,4 @@
-# Instalation
+# Installation
 RUN THESE COMMAND IN ROOT PATH
 Install packages in multiple projects
 `npm i`
