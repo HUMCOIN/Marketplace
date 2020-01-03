@@ -9,10 +9,9 @@ export const getAllProjects = async () => {
 }
 
 export const createProject = async projectParams => {
-  //sender not working yet - out of gas error
   const contract = await instanceContract('ProjectFactory')
   contract.options.address = projectFactoryAddress
-  const gasConfig = await tryContract(contract, 'getProjects')
+  const gasConfig = await tryContract(contract, 'createProject', ...projectParams)
   const newProject = await sendContract(contract, 'createProject', gasConfig, ...projectParams)
   return newProject;
 }

@@ -9,10 +9,14 @@ function Marketplace() {
 
   const onSubmit = async event => {
     event.preventDefault();
-    // console.log(await getAllProjects())
-    await createProject(['0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1', 1, 1])
+    // get projects array
+    //await getAllProjects()
+
+    // create a new project
+    // await createProject(['0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1', 1, 1])
+
+    // add hash object
     // const hash = await add(file)
-    // console.log(hash)
   };
 
   const captureFile = async event => {

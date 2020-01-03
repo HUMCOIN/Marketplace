@@ -74,7 +74,6 @@ export const tryContract = async (contractInstance, method, ...parameters) => {
   let gas = 0;
   try {
     const gasEstimate = await gasCalculator(contractInstance, method, ...parameters);
-    console.log(gasEstimate)
     gas = gasEstimate ? gasEstimate * 2 : 1000000;
     return new BN(Math.min(1000000, gas))
   } catch (error) {
