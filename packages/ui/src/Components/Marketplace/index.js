@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { add } from "../../libs/ipfs";
-import { getDefaultAccount } from "../../libs/web3";
+import { add } from "../../Libs/ipfs";
+import { getAllProjects, createProject } from "../../Requests/project";
 
 import "./main.css";
 
@@ -9,7 +9,8 @@ function Marketplace() {
 
   const onSubmit = async event => {
     event.preventDefault();
-    console.log(await getDefaultAccount())
+    // console.log(await getAllProjects())
+    await createProject(['0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1', 1, 1])
     // const hash = await add(file)
     // console.log(hash)
   };
@@ -23,7 +24,7 @@ function Marketplace() {
     fileReader.readAsDataURL(file);
 
     await new Promise(
-      (resolve, reject) => (fileReader.onloadend = () => resolve())
+      (resolve, _) => (fileReader.onloadend = () => resolve())
     );
 
     //file is converted to a buffer for upload to IPFS
