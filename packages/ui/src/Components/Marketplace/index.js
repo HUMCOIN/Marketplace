@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { add } from "../../libs/ipfs";
 import { getAllProjects, createProject } from "../../Requests/project";
 
+import NavigationBar from "../NavigationBar";
+
 import "./main.css";
 
 function Marketplace() {
@@ -40,6 +42,7 @@ function Marketplace() {
   return (
     // this is going to be moved to a new component
     <div className="App">
+      <NavigationBar></NavigationBar>
       <header>
         <h1> Ethereum and IPFS with Create React App</h1>
       </header>
