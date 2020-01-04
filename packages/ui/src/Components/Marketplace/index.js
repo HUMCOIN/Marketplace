@@ -7,6 +7,7 @@ import NavigationBar from "../NavigationBar";
 import ProjectCard from "../ProjectCard";
 
 import "./main.css";
+import Statistics from "../Statistics";
 
 // Projects Mock Data
 
@@ -18,9 +19,9 @@ const projects = [
     statement: "Statement example # 1",
     implementer: "John Doe",
     region: "Africa",
-    sdgs: ["No poverty", "Zero hunger"],
+    sdgs: [1, 2, 4],
     budget: 1000000,
-    currency: "EUR",
+    currency: "USD",
     duration: 120,
     timeUnit: "Days",
     revenueModality: "Donation"
@@ -32,9 +33,9 @@ const projects = [
     statement: "Statement example # 2",
     implementer: "Jane Doe",
     region: "East Asia",
-    sdgs: ["Reduced inequalities"],
+    sdgs: [5],
     budget: 2500000,
-    currency: "JPY",
+    currency: "USD",
     duration: 20,
     timeUnit: "Months",
     revenueModality: "Donation"
@@ -46,7 +47,7 @@ const projects = [
     statement: "Statement example # 3",
     implementer: "John Smith",
     region: "Latin America",
-    sdgs: ["Clean water and sanitation", "Decent work and economic growth"],
+    sdgs: [3, 6],
     budget: 300000,
     currency: "USD",
     duration: 3,
@@ -92,6 +93,7 @@ function Marketplace() {
     // this is going to be moved to a new component
     <div className="App">
       <NavigationBar></NavigationBar>
+      <Statistics projects={projects}></Statistics>
       <Container>
         <Row>
           {
