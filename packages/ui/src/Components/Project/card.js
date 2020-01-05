@@ -1,7 +1,8 @@
 import React from "react";
 import { Card, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 
-function ProjectCard({
+export function ProjectCard(props) {
+  const {
     name,
     photoURL,
     statement,
@@ -11,8 +12,7 @@ function ProjectCard({
     budget,
     duration,
     revenueModality
-}) {
-
+} = props.info
     console.log(photoURL)
     return (
         <Card style={{ width: '18rem' }}>
@@ -33,5 +33,3 @@ function ProjectCard({
         </Card>
     )
 }
-
-export default ProjectCard;
