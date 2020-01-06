@@ -75,7 +75,7 @@ export function ProjectCard(props) {
                     </Row>
                     <Row className="justify-content-center">
                       <span className="blog-slider__text" id="budget">
-                        {budget}${" "}
+                        ${budget}{" "}
                       </span>
                     </Row>
                   </Col>
@@ -122,7 +122,7 @@ export function ProjectCard(props) {
                   <Col xs="6" className="box">
                     <Row className="justify-content-center">
                       <label className="bold" htmlFor="budget">
-                        Revenue
+                        Investment Type
                       </label>
                     </Row>
                     <Row className="justify-content-center">
