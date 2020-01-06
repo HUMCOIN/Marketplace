@@ -55,7 +55,13 @@ export function ProjectCard(props) {
               </Row>
               <br></br>
               <Row className="blog-slider__text">
-                <span className="blog-slider__text">{statement} </span>
+                <span className="blog-slider__text">
+                  Implementer: {implementer}{" "}
+                </span>
+              </Row>
+              <br></br>
+              <Row className="blog-slider__text">
+                <span className="blog-slider__text">{statement}</span>
               </Row>
               <br></br>
               <br></br>
@@ -104,7 +110,7 @@ export function ProjectCard(props) {
                   <Col xs="6" className="box">
                     <Row className="justify-content-center">
                       <label className="bold" htmlFor="budget">
-                        Region
+                        Location
                       </label>
                     </Row>
                     <Row className="justify-content-center">
@@ -141,9 +147,9 @@ export function ProjectCard(props) {
                 }
               }}
             >
-              <a href="#" className="blog-slider__button bold">
+              <p href="#" className="blog-slider__button bold">
                 READ MORE
-              </a>
+              </p>
             </Link>
           </Row>
         </Row>
