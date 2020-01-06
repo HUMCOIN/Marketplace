@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from "react";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row, CardGroup } from "react-bootstrap";
 import { ProjectCard } from "../Project";
 // Projects Mock Data
 import { mockProjects } from "../../data/projects.data";
+import "../Project/main.scss";
 
 export function HomePage() {
-  const [ projects, setProjects ] = useState([])
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    setProjects(mockProjects)
-  }, [projects])
+    setProjects(mockProjects);
+  }, [projects]);
 
   return (
-    <Container>
-      <Row>
+    <Container className="containerMargin">
+      <CardGroup className="cardGroupMargins">
         {projects.map(project => (
-          <Col key={project.id}>
+          <div key={project.id}>
             <ProjectCard info={project} />
-          </Col>
+          </div>
         ))}
-      </Row>
+      </CardGroup>
     </Container>
   );
 }

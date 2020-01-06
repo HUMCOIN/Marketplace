@@ -1,11 +1,16 @@
 import React from "react";
 import { Navbar, Nav, Button, Form, FormControl } from "react-bootstrap";
+import "../Project/main.scss";
 
 function NavigationBar() {
   return (
-    <Navbar bg="light" variant="light">
+    <Navbar className="navbarColor">
       <Navbar.Brand href="/">
-        <img src="/assets/images/humcoin-logo.png" height="50" alt="Humcoin logo" />
+        <img
+          src="/assets/images/humcoin-logo.png"
+          height="50"
+          alt="Humcoin logo"
+        />
         {/* Turning decisions and investment into impact */}
       </Navbar.Brand>
       <Nav className="mr-auto">
