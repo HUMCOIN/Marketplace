@@ -84,7 +84,7 @@ export function New() {
                 styles={{
                   option: (provided, state) => ({
                     ...provided,
-                    color: state.isSelected ? "#149DCC" : "black",
+                    // color: state.isSelected ? "skyblue" : "black",
                     padding: 20,
                     fontFamily: "Josefin Regular"
                   }),
