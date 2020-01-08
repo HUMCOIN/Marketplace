@@ -32,6 +32,10 @@
   font-family: "Josefin Bold";
 }
 
+.regular {
+  font-family: "Josefin Regular";
+}
+
 .navbarColor {
   outline: auto;
   background-color: white;
@@ -298,6 +302,98 @@ body {
           width: 30px;
         }
       }
+    }
+  }
+}
+
+.form {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  background: #fff;
+  box-shadow: 20px 18px 90px rgba(38, 39, 90, 0.3);
+  padding: 40px;
+  border-radius: 25px;
+  transition: all 0.3s;
+  color: black;
+  margin-bottom: 52px;
+
+  @media screen and (max-width: 992px) {
+    max-width: 680px;
+    height: 400px;
+  }
+
+  @media screen and (max-width: 768px) {
+    min-height: 500px;
+    height: auto;
+    margin: 180px auto;
+  }
+
+  @media screen and (max-height: 500px) and (min-width: 992px) {
+    height: 350px;
+  }
+}
+
+.titleRow {
+  height: 78px;
+}
+
+.spanRow {
+  margin: auto;
+}
+
+.fontLarge {
+  font-size: x-large;
+  color: #444444;
+}
+
+.formLabel {
+  font-family: "Josefin Regular";
+  font-size: 17px;
+}
+
+.formInput {
+  border-radius: 15px;
+}
+
+input:active .formInput {
+  border: "1px solid red";
+  color: red;
+}
+
+.formButton {
+  background-image: linear-gradient(147deg, #149dcc 0%, gray 74%);
+  padding: 15px 35px;
+  border-radius: 50px;
+  color: #fff;
+  // box-shadow: 0px 14px 80px rgba(252, 56, 56, 0.4);
+  text-decoration: none;
+  font-weight: 500;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 1px;
+  border-color: inherit;
+}
+
+.select {
+  margin: 10px;
+
+  .react-select {
+    &__control {
+      border: 0;
+      border-radius: 0;
+      color: red;
+    }
+
+    &__indicator-separator {
+      display: none;
+    }
+
+    &__menu {
+      border-radius: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 100;
     }
   }
 }
