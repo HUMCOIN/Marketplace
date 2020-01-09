@@ -4,8 +4,11 @@ import { add } from "../../libs/ipfs";
 import { createProject } from "../../requests/project";
 import Select from "react-select";
 import { sdgs } from "../../data/sdgs.data";
+import { countryList } from "../../data/countries.data";
+import { investmentType } from "../../data/investmentType.data";
 import "./main.scss";
 import { object } from "prop-types";
+import CurrencyInput from "react-currency-input";
 
 export function New() {
   const [file, setFile] = useState();
@@ -80,7 +83,7 @@ export function New() {
             <Col>
               <Form.Label className="formLabel">Location</Form.Label>
               <Select
-                options={options}
+                options={countryList}
                 styles={{
                   option: (provided, state) => ({
                     ...provided,
@@ -136,8 +139,48 @@ export function New() {
         <Form.Group>
           <Row>
             <Col>
+              <Form.Label className="formLabel">Investment Type </Form.Label>
+              <Select
+                options={investmentType}
+                styles={{
+                  option: (provided, state) => ({
+                    ...provided,
+                    color: state.isSelected ? "#149DCC" : "black",
+                    padding: 20,
+                    fontFamily: "Josefin Regular"
+                  }),
+                  control: (base, state) => ({
+                    ...base,
+                    "&:hover": { borderColor: "gray" }, // border style on hover
+                    border: "1px solid lightgray", // default border color
+                    borderRadius: "14px !important",
+                    fontFamily: "Josefin Regular",
+                    fontWeight: "20px",
+                    boxShadow: "none" // no box-shadow
+                  })
+                }}
+                className="formInput react-select__control"
+              />
+            </Col>
+            <Col>
+              <Form.Label className="formLabel">Impact </Form.Label>
+              <Form.Control as="input" type="number" className="formInput" />
+            </Col>
+          </Row>
+        </Form.Group>
+
+        <Form.Group>
+          <Row>
+            <Col>
               <Form.Label className="formLabel">Budget</Form.Label>
-              <Form.Control className="formInput" />
+              {/* <Form.Control className="formInput" /> */}
+              <CurrencyInput
+                decimalSeparator=","
+                thousandSeparator="."
+                prefix="$"
+                suffix="USD"
+                className="budgetInput"
+              />
             </Col>
             <Col>
               <Form.Label className="formLabel">Duration</Form.Label>
@@ -147,16 +190,8 @@ export function New() {
         </Form.Group>
 
         <Form.Group>
-          <Row>
-            <Col>
-              <Form.Label className="formLabel">Investment Type </Form.Label>
-              <Form.Control className="formInput" />
-            </Col>
-          </Row>
-        </Form.Group>
-        <Form.Group>
           <Form.Label className="formLabel">Statement</Form.Label>
-          <Form.Control className="formInput" />
+          <Form.Control as="textarea" className="formInput" />
         </Form.Group>
         <Button className="formButton" type="submit">
           Submit

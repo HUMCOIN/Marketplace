@@ -1,0 +1,41 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.19.1/libexec/bin/yarn.js install
+
+PATH: 
+  /Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  10.16.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: EACCES: permission denied, mkdir '/Users/fabiolalombardi/Desktop/Humcoin/Marketplace/node_modules/@lerna/cli/node_modules'
+
+npm manifest: 
+  {
+    "name": "@humcoin/marketplace",
+    "version": "0.0.1-beta",
+    "scripts": {
+      "postinstall": "npx lerna bootstrap",
+      "start": "cd packages/ui && npm run start",
+      "migrate": "cd packages/eth && concurrently \"ganache-cli --blockTime 1 --deterministic\" \"npm run migrate\""
+    },
+    "devDependencies": {
+      "lerna": "^3.18.4",
+      "concurrently": "^5.0.0"
+    },
+    "dependencies": {
+      "react-router-dom": "^5.1.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

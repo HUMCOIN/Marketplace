@@ -397,3 +397,12 @@ input:active .formInput {
     }
   }
 }
+
+.budgetInput {
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  padding: 13px;
+  font-family: "Josefin SemiBold";
+}
