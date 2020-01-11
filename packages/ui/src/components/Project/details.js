@@ -127,7 +127,7 @@ export function Details() {
                   </span>
                 </Row>
                 <Row className="justify-content-center marginTopRow">
-                  <h5 className="regular">${project.revenueModality}</h5>
+                  <h5 className="regular">{project.revenueModality}</h5>
                 </Row>
               </Col>
               <Col xs="4">
