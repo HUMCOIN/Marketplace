@@ -5,6 +5,6 @@ export const investmentType = [
   },
   {
     label: "Project-based Funds",
-    value: 0
+    value: 1
   }
 ];

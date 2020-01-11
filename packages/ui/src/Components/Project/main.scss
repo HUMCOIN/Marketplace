@@ -182,10 +182,12 @@ body {
 
   &__content {
     // width: 60%;
-    padding-right: 25px;
     height: 300px;
-    padding-top: 25px;
-    width: 500px;
+    padding-top: 0px;
+    width: 800px;
+    margin-right: 10px;
+    margin-left: -36px;
+
     @media screen and (max-width: 992px) {
       // width: 55%;
     }
@@ -405,4 +407,24 @@ input:active .formInput {
   border-radius: 15px;
   padding: 13px;
   font-family: "Josefin SemiBold";
+}
+
+.badge {
+  background-color: #aaaaaa;
+  border: 1px solid lightgray;
+  margin-bottom: 3px;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding: 4px;
+  color: black;
+  border-radius: 4px;
+  cursor: default;
+}
+
+.bagdeRow {
+  margin-top: 10px;
+}
+
+.boxRow {
+  margin-top: 8px;
 }

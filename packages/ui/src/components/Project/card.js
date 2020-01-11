@@ -20,6 +20,8 @@ export function ProjectCard(props) {
     revenueModality
   } = props.info;
 
+  const myTruncatedString = badgeText => badgeText.substring(0, 8) + "...";
+
   return (
     <Fragment>
       <div className="blog-slider">
@@ -43,10 +45,10 @@ export function ProjectCard(props) {
                 <span className="blog-slider__text">{statement}</span>
               </Row>
               <br></br>
-              <br></br>
+
               <Row className="blog-slider__text">
-                <Row>
-                  <Col xs="4" className="box">
+                <Row className="boxRow">
+                  <Col xs="6" className="box">
                     <Row className="justify-content-center">
                       <label className="bold" htmlFor="budget">
                         Budget
@@ -58,7 +60,7 @@ export function ProjectCard(props) {
                       </span>
                     </Row>
                   </Col>
-                  <Col xs="4" className="box">
+                  {/* <Col xs="4" className="box">
                     <Row className="justify-content-center">
                       <label className="bold" htmlFor="budget">
                         SDGs
@@ -68,12 +70,12 @@ export function ProjectCard(props) {
                       <span className="blog-slider__text" id="budget">
                         {
                           // TODO: These sdg names must fit inside card space
-                          //projectSdgs.map(sdg => <Badge>{sdgs[sdg]}</Badge>)
+                          projectSdgs.map(sdg => <Badge variant="light" className="badge">{myTruncatedString(sdgs[sdg])}</Badge>)
                         }
                       </span>
                     </Row>
-                  </Col>
-                  <Col xs="4" className="box">
+                  </Col> */}
+                  <Col xs="6" className="box">
                     <Row className="justify-content-center">
                       <label className="bold" htmlFor="budget">
                         Duration
@@ -113,6 +115,16 @@ export function ProjectCard(props) {
                       </span>
                     </Row>
                   </Col>
+                </Row>
+                <Row className="bagdeRow">
+                  <span className="blog-slider__text" id="budget">
+                    {// TODO: These sdg names must fit inside card space
+                    projectSdgs.map(sdg => (
+                      <Badge variant="light" className="badge">
+                        {sdgs[sdg]}
+                      </Badge>
+                    ))}
+                  </span>
                 </Row>
               </Row>
             </div>

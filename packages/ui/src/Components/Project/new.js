@@ -74,7 +74,12 @@ export function New() {
             <Col xs="2"></Col>
             <Col>
               <Form.Label className="formLabel">Title</Form.Label>
-              <Form.Control className="formInput"></Form.Control>
+              <Form.Control
+                className="formInput regular"
+                as="input"
+                type="text"
+                placeholder="Title goes here"
+              ></Form.Control>
             </Col>
             <Col xs="2"></Col>
           </Row>
@@ -87,7 +92,7 @@ export function New() {
                 styles={{
                   option: (provided, state) => ({
                     ...provided,
-                    // color: state.isSelected ? "skyblue" : "black",
+                    backgroundColor: state.isSelected ? "#149DCC" : "white",
                     padding: 20,
                     fontFamily: "Josefin Regular"
                   }),
@@ -116,7 +121,7 @@ export function New() {
                 styles={{
                   option: (provided, state) => ({
                     ...provided,
-                    color: state.isSelected ? "#149DCC" : "black",
+                    //  backgroundColor: state.isSelected ? "gray" : "red",
                     padding: 20,
                     fontFamily: "Josefin Regular"
                   }),
@@ -145,7 +150,7 @@ export function New() {
                 styles={{
                   option: (provided, state) => ({
                     ...provided,
-                    color: state.isSelected ? "#149DCC" : "black",
+                    backgroundColor: state.isSelected ? "#149DCC" : "white",
                     padding: 20,
                     fontFamily: "Josefin Regular"
                   }),
@@ -179,19 +184,28 @@ export function New() {
                 thousandSeparator="."
                 prefix="$"
                 suffix="USD"
-                className="budgetInput"
+                className="budgetInput regular"
               />
             </Col>
             <Col>
               <Form.Label className="formLabel">Duration</Form.Label>
-              <Form.Control className="formInput" />
+              <Form.Control
+                className="formInput regular"
+                as="input"
+                type="number"
+                placeholder=" 30 days"
+              />
             </Col>
           </Row>
         </Form.Group>
 
         <Form.Group>
           <Form.Label className="formLabel">Statement</Form.Label>
-          <Form.Control as="textarea" className="formInput" />
+          <Form.Control
+            as="textarea"
+            className="formInput regular"
+            placeholder="Add some text..."
+          />
         </Form.Group>
         <Button className="formButton" type="submit">
           Submit
