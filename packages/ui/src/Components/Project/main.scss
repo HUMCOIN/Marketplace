@@ -428,3 +428,67 @@ input:active .formInput {
 .boxRow {
   margin-top: 8px;
 }
+
+.detail {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  background: #fff;
+  box-shadow: 20px 18px 90px rgba(38, 39, 90, 0.3);
+  padding: 40px;
+  /* border-radius: 25px; */
+  transition: all 0.3s;
+  color: black;
+  /* margin-bottom: 52px; */
+  margin-top: 3px;
+  height: 100vh;
+
+  @media screen and (max-width: 992px) {
+    max-width: 680px;
+    height: 400px;
+  }
+
+  @media screen and (max-width: 768px) {
+    min-height: 500px;
+    height: auto;
+    margin: 180px auto;
+  }
+
+  @media screen and (max-height: 500px) and (min-width: 992px) {
+    height: 350px;
+  }
+}
+
+.jumbotron {
+  background-color: white;
+  margin: 0;
+  border-radius: 18px;
+  box-shadow: 20px 18px 90px rgba(38, 39, 90, 0.3);
+}
+
+.imageBox {
+  border: 1px solid lightgray;
+  border-top: transparent;
+  border-bottom: transparent;
+}
+
+.titleDetail {
+  margin-top: 500px;
+}
+
+.icon {
+  height: 40px;
+  color: #555555;
+}
+
+.detailMargin {
+  margin-top: 200px;
+}
+
+.marginRow {
+  margin-bottom: 120px;
+}
+
+.marginTopRow {
+  margin-top: 15px;
+}
