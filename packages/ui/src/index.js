@@ -1,6 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './Components/Marketplace';
+import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from './components/Marketplace';
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+, document.getElementById('root'));

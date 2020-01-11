@@ -9,5 +9,8 @@
   "devDependencies": {
     "lerna": "^3.18.4",
     "concurrently": "^5.0.0"
+  },
+  "dependencies": {
+    "react-router-dom": "^5.1.2"
   }
 }
