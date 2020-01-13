@@ -37,7 +37,7 @@
 }
 
 .navbarColor {
-  outline: auto;
+  border-bottom: 2px solid lightgray;
   background-color: white;
 }
 
@@ -374,7 +374,7 @@ input:active .formInput {
   justify-content: center;
   text-align: center;
   letter-spacing: 1px;
-  border-color: inherit;
+  border-color: transparent;
 }
 
 .select {
@@ -491,4 +491,11 @@ input:active .formInput {
 
 .marginTopRow {
   margin-top: 15px;
+}
+
+.imagePosition {
+  width: 60px;
+  height: 60px;
+  margin-left: 15px;
+  padding: 9px;
 }

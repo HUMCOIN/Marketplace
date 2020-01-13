@@ -13,14 +13,14 @@ function NavigationBar() {
         />
         {/* Turning decisions and investment into impact */}
       </Navbar.Brand>
-      <Nav className="mr-auto">
+      {/* <Nav className="mr-auto">
         <Nav.Link href="/login">Register/Login</Nav.Link>
         <Nav.Link href="/new">Create new project</Nav.Link>
       </Nav>
       <Form inline>
         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
         <Button variant="outline-primary">Search</Button>
-      </Form>
+      </Form> */}
     </Navbar>
   );
 }

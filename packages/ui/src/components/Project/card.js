@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import { sdgs } from "../../data/sdgs.data";
 import "./main.scss";
+import SDGsImages from "../../data/sdgsImages.json";
 // import Swipperwi from 'swiper';
 
 export function ProjectCard(props) {
@@ -20,7 +21,26 @@ export function ProjectCard(props) {
     revenueModality
   } = props.info;
 
+  const images = SDGsImages.sdgs;
   const myTruncatedString = badgeText => badgeText.substring(0, 8) + "...";
+
+  const getSDGs = string => {
+    let sdg = string.toUpperCase();
+
+    return getSDGsImage(sdg);
+  };
+
+  const getSDGsImage = label => {
+    for (let i in images) {
+      if (i === label) {
+        console.log(images[i]);
+        return <img className="imagePosition" src={images[i]} />;
+      }
+      //   }else
+      //     return;
+      // }
+    }
+  };
 
   return (
     <Fragment>
@@ -120,9 +140,15 @@ export function ProjectCard(props) {
                   <span className="blog-slider__text" id="budget">
                     {// TODO: These sdg names must fit inside card space
                     projectSdgs.map(sdg => (
-                      <Badge variant="light" className="badge">
-                        {sdgs[sdg]}
-                      </Badge>
+                      // <Badge variant="light" className="badge">
+                      //   {sdgs[sdg]}
+                      // </Badge>
+                      // <img src={}></img>
+                      // console.log(sdgs[sdg])
+                      <Row>
+                        {/* <img className="imagePosition" src={getSDGs(sdgs[sdg])} /> */}
+                        {getSDGs(sdgs[sdg])}
+                      </Row>
                     ))}
                   </span>
                 </Row>

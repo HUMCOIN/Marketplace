@@ -1,0 +1,21 @@
+{
+  "sdgs": {
+    "NO POVERTY": "assets/images/no_poverty.png",
+    "ZERO HUNGER": "assets/images/zero_hunger.png",
+    "GOOD HEALTH AND WELL-BEING": "assets/images/good_health.png",
+    "QUALITY EDUCATION": "assets/images/quality_education.png",
+    "GENDER EQUALITY": "assets/images/gender_equality.png",
+    "CLEAN WATER AND SANITATION": "assets/images/clean_water.png",
+    "AFFORDABLE AND CLEAN ENERGY": "assets/images/clean_energy.png",
+    "DECENT WORK AND ECONOMIC GROWTH": "assets/images/decent_work.png",
+    "INDUSTRY, INNOVATION, AND INFRASTRUCTURE": "assets/images/industry.png",
+    "REDUCED INEQUALITIES": "assets/images/reduce_inequalities.png",
+    "SUSTAINABLE CITIES AND COMMUNITIES": "assets/images/sustainable_cities.png",
+    "RESPONSIBLE CONSUMPTION AND PRODUCTION": "assets/images/responsable_consumption.png",
+    "CLIMATE ACTION": "assets/images/climate_action.png",
+    "LIFE BELOW WATER": "assets/images/life_water.png",
+    "LIFE ON LAND": "assets/images/life_land",
+    "PEACE, JUSTICE AND STRONG INSTITUTIONS": "assets/images/peace_justice.png",
+    "PARTNERSHIPS": "assets/images/partnership_goals.png"
+  }
+}
